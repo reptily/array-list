@@ -4,6 +4,7 @@ composer require reptily/array-list
 ```
 ## what problem does this library solve?
 There are no built-in mechanisms for creating lists in the PHP language. An associative array does not guarantee that its elements are typed.
+
 Example
 ```php
 function show(array $items)
