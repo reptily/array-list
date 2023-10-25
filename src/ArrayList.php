@@ -3,13 +3,15 @@
 namespace Reptily\ArrayList;
 
 use ArrayAccess;
+use Countable;
 use Exception;
 use Iterator;
 
-class ArrayList implements Iterator, ArrayAccess
+class ArrayList implements Iterator, ArrayAccess, Countable
 {
     use IteratorTrait;
     use ArrayAccessTrait;
+    use CountableTrait;
 
     public const TYPE_STRING = 'string';
     public const TYPE_INTEGER = 'integer';

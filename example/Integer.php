@@ -14,3 +14,4 @@ foreach ($list as $item) {
 }
 
 echo $list[0] . PHP_EOL;
+echo count($list) . PHP_EOL;
