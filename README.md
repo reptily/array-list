@@ -30,7 +30,7 @@ More examples in the directory [/example](/example)
 
 #Only integer
 ```php
-$list = new ArrayList(ArrayList::TYPE_INTEGER[1, 2, 3]);
+$list = new ArrayList(ArrayList::TYPE_INTEGER, [1, 2, 3]);
 // or
 $list = new ArrayListInteger([1, 2, 3]);
 
