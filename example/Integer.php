@@ -8,6 +8,7 @@ $list = new ArrayListInteger();
 $list->add(1);
 $list->add(2);
 $list->add(3);
+$list[] = 4;
 
 foreach ($list as $item) {
     echo $item . PHP_EOL;

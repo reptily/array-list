@@ -16,6 +16,12 @@ trait ArrayAccessTrait
 
     public function offsetSet($index, $item)
     {
+        if ($index === null) {
+            $this->add($item);
+
+            return;
+        }
+
         $this->set($index, $item);
     }
 
