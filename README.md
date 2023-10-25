@@ -64,3 +64,87 @@ function echoDTOs(UserList $list): void
     });
 }
 ```
+
+### Methods
+**add(mixed $item): void**
+
+Adds an element to the array
+
+**count(): int**
+
+Return the number of elements in the array
+
+**isEmpty(): bool**
+
+Return is empty
+
+**indexOf(mixed $element): ?int**
+
+Searches the array for a match, if there is one it will return the index, if not then return null
+
+**lastIndexOf(): ?int**
+
+Will return the last index in the array, if the array is empty will return null
+
+**clone(): self**
+
+Clones an object
+
+**toArray(): array**
+
+Converts to an associative array
+
+**get(int $index): mixed**
+
+Returns an element by its index, if there is no element, an exception will be thrown
+
+**set(int $index, mixed $item): void**
+
+Sets a value on an element by its index
+
+**exists(int $index): bool**
+
+Checks the presence of an element by its index
+
+**remove(int $index): void**
+
+Remove element by its index
+
+**clear(): void**
+
+Cleans the array
+
+**forEach(): callback(mixed $item, int $index)**
+
+Returns a callback for each element in the array
+
+**sort(string $sort = 'asc'|'desc'): void**
+
+Sorts an array
+
+### Support class
+**ArrayListInteger**
+
+Creates a list where the elements must all be integer
+
+**ArrayListString**
+
+Creates a list where the elements must all be string
+
+**ArrayListFloat**
+
+Creates a list where the elements must all be float
+
+## Constants
+Constants by types
+* TYPE_STRING
+* TYPE_INTEGER
+* TYPE_BOOLEAN
+* TYPE_FLOAT
+
+Constants by sort
+* SORT_DESC
+* SORT_ASC
+
+
+
