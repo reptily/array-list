@@ -2,12 +2,14 @@
 
 namespace Reptily\ArrayList;
 
+use ArrayAccess;
 use Exception;
 use Iterator;
 
-class ArrayList implements Iterator
+class ArrayList implements Iterator, ArrayAccess
 {
     use IteratorTrait;
+    use ArrayAccessTrait;
 
     public const TYPE_STRING = 'string';
     public const TYPE_INTEGER = 'integer';
