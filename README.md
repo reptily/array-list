@@ -25,10 +25,10 @@ function show(ArrayList $items)
 The code did not become larger, but typification appeared.
 **ArrayList** takes care of all typing and data access issues. We can be sure that all types in the array are correct and not do unnecessary checks.
 
-##Example
+## Example
 More examples in the directory [/example](/example)
 
-#Only integer
+#### Only integer
 ```php
 $list = new ArrayList(ArrayList::TYPE_INTEGER, [1, 2, 3]);
 // or
@@ -39,7 +39,7 @@ foreach ($list as $item) {
 }
 ```
 
-#If we need a collection of objects
+#### If we need a collection of objects
 ```php
 class UserList extends ArrayList {};
 class UserDTO {
