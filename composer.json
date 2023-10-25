@@ -1,7 +1,7 @@
 {
     "name": "reptily/array-list",
     "description": "ArrayList for PHP",
-    "license": "GNU",
+    "license": "GPL-3.0-or-later",
     "autoload": {
         "psr-4": {
             "Reptily\\ArrayList\\": "src/"
