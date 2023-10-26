@@ -169,4 +169,33 @@ class Tests extends TestCase
         $list->add($obj);
         $this->assertSame($list->get(0), $obj);
     }
+
+    public function testAddUseAsArray(): void
+    {
+        $list = new ArrayList(ArrayList::TYPE_STRING);
+        $list[] = 'test';
+
+        $this->assertSame($list->count(), 1);
+
+        $list[1] = 'test';
+        $this->assertSame($list->count(), 2);
+    }
+
+    public function testCountAsArray(): void
+    {
+        $list = new ArrayList(ArrayList::TYPE_STRING);
+        $list[] = 'test';
+
+        $this->assertSame(count($list), 1);
+    }
+
+    public function testRemoveAsArray(): void
+    {
+        $list = new ArrayList(ArrayList::TYPE_STRING);
+        $list[] = 'test';
+        $this->assertTrue($list->exists(0));
+
+        unset($list[0]);
+        $this->assertFalse($list->exists(0));
+    }
 }

@@ -66,6 +66,34 @@ function echoDTOs(UserList $list): void
 }
 ```
 
+#### Use as Object
+```php
+$ids = new ArrayListInteger([1, 2, 3]);
+$ids->add(4);
+
+function show(ArrayListInteger $ids)
+{
+    $ids->forEach(function($id) {
+        echo $id . PHP_EOL;
+    });
+}
+show();
+```
+
+#### Use as Array
+```php
+$ids = new ArrayListInteger([1, 2, 3]);
+$ids[] = 4;
+
+function show(ArrayListInteger $ids)
+{
+    foreach ($ids as $id) {
+        echo $id;
+    }
+}
+show();
+```
+
 ### Methods
 **add(mixed $item): void**
 

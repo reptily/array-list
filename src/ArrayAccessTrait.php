@@ -22,6 +22,12 @@ trait ArrayAccessTrait
             return;
         }
 
+        if (!$this->exists($index)) {
+            $this->add($item);
+
+            return;
+        }
+
         $this->set($index, $item);
     }
 
