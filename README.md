@@ -42,7 +42,13 @@ foreach ($list as $item) {
 
 #### If we need a collection of objects
 ```php
-class UserList extends ArrayList {};
+class UserList extends ArrayList {
+    public function __construct(?array $items = null)
+    {
+        parent::__construct(UserDTO::class, $items);
+    }
+};
+
 class UserDTO {
     public $id;
     public $name;
@@ -54,7 +60,7 @@ class UserDTO {
     }
 }
 
-$userList = new UserList(UserDTO::class);
+$userList = new UserList();
 $userList->add(new UserDTO(1, 'bob'));
 $userList->add(new UserDTO(2, 'job'));
 
